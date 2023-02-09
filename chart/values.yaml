@@ -243,7 +243,7 @@ reloader:
 
 # Kube Prometheus Stack
 kubePrometheusStack:
-  enable: true
+  enable: false
 
 # Kyverno Values
 kyverno:
