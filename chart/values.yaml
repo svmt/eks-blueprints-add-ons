@@ -22,7 +22,6 @@ istiod:
 # Istio gateway Values
 istio_gateway:
   enable: true
-  createNamespace: false
 
 # Agones Values
 agones:

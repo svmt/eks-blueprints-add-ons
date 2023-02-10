@@ -12,16 +12,9 @@ spec:
     repoURL: {{ .Values.repoUrl }}
     path: add-ons/istio-gateway
     targetRevision: {{ .Values.targetRevision }}
-    helm:
-      values: |
-        gateway:
-        {{- toYaml .Values.istio_base | nindent 10 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: istio-ingress
-  clusterResourceWhitelist:
-    - group: ''
-      kind: 'Namespace'
   syncPolicy:
     automated:
       prune: true
