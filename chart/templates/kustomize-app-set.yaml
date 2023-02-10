@@ -1,28 +1,17 @@
-{{- if and (.Values.kustomize) (.Values.kustomize.enable) -}}
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
   name: kustomize
 spec:
-  generators:
-    - list:
-        elements:
-          - name: main
-            url: https://kubernetes.default.svc
-  template:
-    metadata:
-      name: 'kustomize-{{name}}'
-    spec:
-      project: default
-      destination:
-        server: '{{url}}'
-        namespace: argocd
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-      source:
-        repoURL: https://github.com/svmt/eks-blueprints-add-ons
-        path: 'kustomize/{{name}}'
-        targetRevision: main
-  {{- end }}
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  source:
+    repoURL: https://github.com/svmt/eks-blueprints-add-ons
+    path: 'kustomize'
+    targetRevision: main
