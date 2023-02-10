@@ -5,6 +5,10 @@ region: ''
 account: ''
 clusterName: ''
 
+# Kustomize
+kustomize:
+  enable: true
+
 # Istio base Values
 istio_base:
   enable: true
