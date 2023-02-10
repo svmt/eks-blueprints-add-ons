@@ -6,7 +6,7 @@ account: ''
 clusterName: ''
 
 # Istio base Values
-istio-base:
+istio_base:
   enable: true
   createNamespace: true
 
