@@ -9,7 +9,7 @@ spec:
   project: default
   destination:
     namespace: argocd
-    server: https://k8s-dev-ga.prod-ga.local:16443
+    server: https://kubernetes.default.svc
   syncPolicy:
     automated:
       prune: true
