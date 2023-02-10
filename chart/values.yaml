@@ -7,7 +7,7 @@ clusterName: ''
 
 # Istio base Values
 istio-base:
-  enable: false 
+  enable: true
   createNamespace: true
 
 # Istio discovery Values
