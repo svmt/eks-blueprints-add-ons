@@ -2,11 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kustomize
+  namespace: argocd # should always be argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   destination:
-    server: https://kubernetes.default.svc
     namespace: argocd
+    server: https://k8s-dev-ga.prod-ga.local:16443
   syncPolicy:
     automated:
       prune: true
