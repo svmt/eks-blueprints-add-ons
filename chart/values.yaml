@@ -12,7 +12,12 @@ istio_base:
 
 # Istio discovery Values
 istiod:
-  enable: false
+  enable: true
+  createNamespace: false
+
+# Istio gateway Values
+istio_gateway:
+  enable: true
   createNamespace: false
 
 # Agones Values
