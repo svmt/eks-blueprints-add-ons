@@ -1,9 +1,9 @@
 # Global Values
 repoUrl: 'https://github.com/svmt/eks-blueprints-add-ons.git'
 targetRevision: HEAD
-region: ''
-account: ''
-clusterName: ''
+region: eu-central-1
+account: 859751670360
+clusterName: eks-cluster-with-new-vpc
 
 # Kustomize
 kustomize:
