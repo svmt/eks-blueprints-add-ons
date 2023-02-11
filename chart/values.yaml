@@ -11,7 +11,7 @@ kustomize:
 
 # Istio base Values
 istio_base:
-  enable: true
+  enable: false
   createNamespace: true
 
 # Istio discovery Values
